@@ -1,5 +1,48 @@
 pub fn annotate(minefield: &[&str]) -> Vec<String> {
-    unimplemented!("\nAnnotate each square of the given minefield with the number of mines that surround said square (blank if there are no surrounding mines):\n{:#?}\n", minefield);
+    let mut result: Vec<String> = vec![];
+    let height = minefield.len();
+    if height == 0 { return result; }
+    let width = minefield[0].len();
+    for i in 0..height {
+        let mut row = String::from("");
+        for j in 0..width {
+            if minefield[i].chars().nth(j).unwrap() == '*' {
+                row.push('*');
+                continue;
+            }
+            let mut count = 0;
+            let uppermost = i == 0;
+            let lowermost = i == (height-1);
+            let leftmost = j == 0;
+            let rightmost = j == (width-1);
+            if !uppermost {
+                if minefield[i-1].chars().nth(j).unwrap() == '*' {count += 1;}
+                if !leftmost && minefield[i-1].chars().nth(j-1).unwrap() == '*' {count += 1;}
+                if !rightmost && minefield[i-1].chars().nth(j+1).unwrap() == '*' {count += 1;}
+            }
+            if !lowermost {
+                if minefield[i+1].chars().nth(j).unwrap() == '*' {count += 1;}
+                if !leftmost && minefield[i+1].chars().nth(j-1).unwrap() == '*' {count += 1;}
+                if !rightmost && minefield[i+1].chars().nth(j+1).unwrap() == '*' {count += 1;}
+            }
+            if !leftmost && minefield[i].chars().nth(j-1).unwrap() == '*' {   
+                count += 1;
+            }
+            if !rightmost && minefield[i].chars().nth(j+1).unwrap() == '*' {      
+                count += 1;
+            }
+
+            if count == 0 {
+                row.push(' ');
+            } else {
+                row.push(char::from_digit(count as u32, 10).unwrap());
+            }
+        }
+        result.push(row);
+    }
+    
+    return result;
+    // unimplemented!("\nAnnotate each square of the given minefield with the number of mines that surround said square (blank if there are no surrounding mines):\n{:#?}\n", minefield);
 }
 
 #[cfg(test)]
