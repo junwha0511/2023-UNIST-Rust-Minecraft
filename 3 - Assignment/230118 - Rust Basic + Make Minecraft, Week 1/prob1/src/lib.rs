@@ -34,7 +34,6 @@ impl Player {
             None => {
                 if self.health < mana_cost {
                     self.health = 0;
-                    self.revive();
                     return 0;
                 } else {
                     self.health -= mana_cost;
