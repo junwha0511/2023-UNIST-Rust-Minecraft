@@ -2,7 +2,33 @@ use std::collections::HashMap;
 
 /// Count occurrences of words.
 pub fn word_count(words: &str) -> HashMap<String, u32> {
-    unimplemented!("Count of occurrences of words in {:?}", words);
+    let mut count_map: HashMap<String, u32> = HashMap::new();
+    let word_list: Vec<&str> = words.split(|c: char| c != '\'' && !((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9'))).collect();
+    for word in word_list {
+        let word_primitive: String = word.trim_matches(|c: char| c == '\'').chars().map(|c: char| {
+            if c == '\'' {
+                return c;
+            } else if c >= 'A' && c <= 'Z' {
+                return (c as u8 + ('a' as u8 - 'A' as u8)) as char;
+            } else if (c >= 'a' && c <= 'z') || (c >= '0' && c <= '9') {
+                return c;
+            } else {
+                println!("{}", c);
+                unreachable!("Some characters not filtered out!!");
+            }
+        }).collect::<String>();
+
+        if word_primitive == "" {
+            continue;
+        }
+        println!("{}", word_primitive);
+        match count_map.get(&word_primitive) {
+            Some(&count) => count_map.insert(word_primitive, count+1),
+            None => count_map.insert(word_primitive, 1),
+        };
+    }
+
+    return count_map;
 }
 
 #[cfg(test)]
