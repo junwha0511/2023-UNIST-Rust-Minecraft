@@ -18,23 +18,33 @@
   - Assignment #2
 - Week 4 (2/8)
   - Explain Solution of Assignment #2
-- Week 5 (2/15)
+- Week 5 (3/1) [[Lecture]](./1%20-%20Lecture/230301%20-%20Rust%20Basic%20%2B%20Make%20Minecraft%2C%20Week%205.pdf) [[Assignment]](./3%20-%20Assignment/230301%20-%20Rust%20Basic%20%2B%20Make%20Minecraft%2C%20Week%205/) [[Solution]](./4%20-%20Solution/230301%20-%20Rust%20Basic%20%2B%20Make%20Minecraft%2C%20Week%205/)
   - A Tour of Rust, Part 3
   - Assignment #3
-- Week 6 (2/22)
+- Week 6 (3/10) [[Lecture]](./1%20-%20Lecture/230310%20-%20Rust%20Basic%20%2B%20Make%20Minecraft%2C%20Week%206.pdf)
+  - A Tour of Rust, Part 4
+- Week 7 (3/15) [[Assignment]](./3%20-%20Assignment/230310%20-%20Rust%20Basic%20%2B%20Make%20Minecraft%2C%20Week%206/) [[Solution]](./4%20-%20Solution/230310%20-%20Rust%20Basic%20%2B%20Make%20Minecraft%2C%20Week%206/)
+  - A Tour of Rust, Part 4
+  - Assignment #4
+- Week 8 (3/22)
+  - A Tour of Rust, Part 5
+  - Assignment #5
+- Week 9 (4/26)
   - Making Minecraft, Part 1
-- Week 7 (3/1)
+- Week 10 (5/3)
   - Making Minecraft, Part 2
-- Week 8 (3/8)
+- Week 11 (5/10)
   - Making Minecraft, Part 3
-- Week 9 (3/15)
+- Week 12 (5/17)
   - Making Minecraft, Part 4
-- Week 10 (3/22)
+- Week 13 (5/24)
   - Making Minecraft, Part 5
-- Week 11 (3/29)
+- Week 14 (5/31)
   - Making Minecraft, Part 6
-- Week 12 (4/5)
+- Week 15 (6/7)
   - Making Minecraft, Part 7
+- Week 16 (6/14)
+  - Making Minecraft, Part 8
 
 ## References
 
